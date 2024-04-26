@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            text-align: center; /* Center the navigation */
+            border-right: 2px solid #ccc; /* Add border to the right */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #ccc;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exploring Population Dynamics and Education Trends for Informed Decision-Making</h1>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showContent('python')">Python</a></li>
+                <li><a href="#" onclick="showContent('d3')">D3.js</a></li>
+                <li><a href="#" onclick="showContent('Tableau')">Tableau</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div id="python" style="display: none;">
+                <h2>Python</h2>
+                <img src="Images\s1.png" alt="Python">
+                <img src="Images\s2.png" alt="Python">
+                <img src="Images\s3.png" alt="Python">
+                <img src="Images\s4.png" alt="Python">
+                <img src="Images\s5.png" alt="Python">
+            </div>
+            <div id="d3" style="display: none;">
+                <h2>D3.js</h2>
+                <button onclick="openVizhub()">World Population Density</button>
+                <button onclick="openVizhub()">World Population Distribution</button>
+            </div>
+            <div id="Tableau" style="display: none;"> <!-- Corrected the ID here -->
+                <h2>Tableau </h2>
+                <img src="Images\s8.png" alt="Tabulae">
+                <img src="Images\s10.png" alt="Tabulae">
+            </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(id) {
+            var contentDivs = document.querySelectorAll('.content > div');
+            for (var i = 0; i < contentDivs.length; i++) {
+                contentDivs[i].style.display = 'none';
+            }
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function openVizhub() {
+            window.open('https://vizhub.com/jayanthbalina/5a1816ffcb324b51981367afb0d4d384?edit=files&file=script.js','_blank');
+            window.open('https://vizhub.com/jayanthbalina/a5423f9a5792434684ce23b7b1154d91?edit=files&file=script.js','_blank');
+
+        }
+    </script>
+</body>
+</html>
